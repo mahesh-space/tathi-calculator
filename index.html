@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator with Tathi Time</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#explanation">Tathi Method</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main id="calculator">
+        <h1>Compound Interest Calculator</h1>
+        <div class="input-group">
+            <label>Principal Amount (₹): <input type="number" id="principal" step="1000"></label>
+            <label>Annual Interest Rate (%): <input type="number" id="rate" step="0.5"></label>
+            <label>Time (Tathis): <input type="number" id="tathis" step="1">
+                <span class="tooltip">ℹ️
+                    <span class="tooltiptext">1 Tathi ≈ 0.9843 solar days (30 Tathis = 1 lunar month)</span>
+                </span>
+            </label>
+            <label>Compounding Frequency: 
+                <select id="frequency">
+                    <option value="1">Annually</option>
+                    <option value="4">Quarterly</option>
+                    <option value="12" selected>Monthly</option>
+                </select>
+            </label>
+        </div>
+        <button onclick="calculate()">Calculate</button>
+        <div id="result"></div>
+        <canvas id="chart"></canvas>
+    </main>
+
+    <script src="scripts/calculator.js"></script>
+</body>
+</html>
