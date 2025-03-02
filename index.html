@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compound Interest Calculator with Tathi Time</title>
+    <title>Compound Interest Calculator with Tithi Calendar</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -12,7 +12,7 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#calculator">Calculator</a>
-            <a href="#explanation">Tathi Method</a>
+            <a href="#explanation">Tithi Method</a>
             <a href="#about">About</a>
         </nav>
     </header>
@@ -22,11 +22,18 @@
         <div class="input-group">
             <label>Principal Amount (₹): <input type="number" id="principal" step="1000"></label>
             <label>Annual Interest Rate (%): <input type="number" id="rate" step="0.5"></label>
-            <label>Time (Tathis): <input type="number" id="tathis" step="1">
-                <span class="tooltip">ℹ️
-                    <span class="tooltiptext">1 Tathi ≈ 0.9843 solar days (30 Tathis = 1 lunar month)</span>
-                </span>
-            </label>
+            <div class="date-group">
+                <h3>Starting Date</h3>
+                <label>Month: <select id="startMonth"></select></label>
+                <label>Paksha: <select id="startPaksha"></select></label>
+                <label>Tithi: <select id="startTithi"></select></label>
+            </div>
+            <div class="date-group">
+                <h3>Ending Date</h3>
+                <label>Month: <select id="endMonth"></select></label>
+                <label>Paksha: <select id="endPaksha"></select></label>
+                <label>Tithi: <select id="endTithi"></select></label>
+            </div>
             <label>Compounding Frequency: 
                 <select id="frequency">
                     <option value="1">Annually</option>
