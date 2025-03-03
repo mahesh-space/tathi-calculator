@@ -24,12 +24,14 @@
             <label>Annual Interest Rate (%): <input type="number" id="rate" step="0.5"></label>
             <div class="date-group">
                 <h3>Starting Date</h3>
+                <label>Year: <select id="startYear"></select></label>
                 <label>Month: <select id="startMonth"></select></label>
                 <label>Paksha: <select id="startPaksha"></select></label>
                 <label>Tithi: <select id="startTithi"></select></label>
             </div>
             <div class="date-group">
                 <h3>Ending Date</h3>
+                <label>Year: <select id="endYear"></select></label>
                 <label>Month: <select id="endMonth"></select></label>
                 <label>Paksha: <select id="endPaksha"></select></label>
                 <label>Tithi: <select id="endTithi"></select></label>
@@ -42,7 +44,8 @@
                 </select>
             </label>
         </div>
-        <button onclick="calculate()">Calculate</button>
+        
+        <button onclick="calculateInterest()">Calculate Interest</button>
         <div id="result"></div>
         <canvas id="chart"></canvas>
     </main>

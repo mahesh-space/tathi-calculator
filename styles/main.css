@@ -62,3 +62,13 @@ header nav a {
 .date-group h3 {
     margin-top: 0;
 }
+.date-group {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.date-group h3 {
+    margin-top: 0;
+}
